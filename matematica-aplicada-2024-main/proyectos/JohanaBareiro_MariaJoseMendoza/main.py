@@ -69,7 +69,10 @@ rule3 = ctrl.Rule(positive['bajo'] & negative['alto'], sentiment['negativo'])
 rule4 = ctrl.Rule(positive['medio'] & negative['medio'], sentiment['neutral'])
 rule5 = ctrl.Rule(positive['bajo'] & negative['bajo'], sentiment['neutral'])
 
+#CREA EL SISTEMA DE CONTROL
 sentiment_ctrl = ctrl.ControlSystem([rule1, rule2, rule3, rule4, rule5])
+#SIMULA EL SISTEMA DE CONTROL
+
 sentiment_simulation = ctrl.ControlSystemSimulation(sentiment_ctrl)
 
 # ========================
